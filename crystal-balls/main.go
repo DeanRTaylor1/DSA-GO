@@ -20,11 +20,9 @@ func main() {
 }
 
 func CrystalBalls(b []bool) int {
-
+  //Jumpt the sqrrt of the length
 	j := int(math.Sqrt(float64(len(b))))
-
-	fmt.Println(j)
-
+  //Start I at the position j if it's true we jump back and iterate through
 	i := j
 
 	for i < len(b) {
@@ -34,10 +32,8 @@ func CrystalBalls(b []bool) int {
 		}
 		i += j
 	}
-	fmt.Println(i)
+  //move back and then iterate through to find the first true position
 	i -= int(j)
-
-	fmt.Println(i)
 
 	for k := 0; k < j && i < len(b); {
 		k += 1

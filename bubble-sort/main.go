@@ -7,7 +7,6 @@ import (
 )
 
 func main() {
-
 	a := []int{}
 	rand.Seed(time.Now().UnixNano())
 
@@ -15,15 +14,14 @@ func main() {
 		r := rand.Intn(1000)
 		a = append(a, r)
 	}
+
 	fmt.Println(a)
 	fmt.Println(bubbleSort(a))
 }
 
 func bubbleSort(a []int) []int {
 	for i := 0; i < len(a); i++{
-		
 		for j := 0; j < len(a)-1-i; j++{
-			
 			if a[j] > a[j+1] {
 				swap(a, j, j+1)
 			}
